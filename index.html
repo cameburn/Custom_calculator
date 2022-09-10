@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Custom Calculator</title>
+    <link rel = "stylesheet" href = "./style.css">
+</head>
+<body onload="Start()">
+    <div class = "main_container">
+        <div class = "selection_menu", name = "selection_menu">
+            <button class = "selection_item", onclick ="createInt()">число</button>
+            <button class = "selection_item", onclick="createFraction()">дробь</button>
+            <button class = "selection_item", onclick ="createParenthesis()">скобки</button>
+        </div>
+        <div class = "selection_menu  selection_operator_menu", name = "selection_menu">
+            <button class = "selection_item", onclick ="createOpetator('+')">+</button>
+            <button class = "selection_item", onclick ="createOpetator('-')">-</button>
+            <button class = "selection_item", onclick ="createOpetator('*')">*</button>
+            <button class = "selection_item", onclick ="createOpetator('/')">/</button>
+        </div>
+    
+        <div class = "calc_container">
+            <div class = "start_position">
+                <button class = "add_button", id = "create_button_1", onclick="ShowSelectionMenu(this)">
+                    <img src = "Images/Add.png", class = "add_button_image">
+                </button>
+                
+            </div>
+            <div class = "prefabs_container">
+                <div class = "int", name = "int">
+                    <input type="text", class = "int_inner">
+                </div>
+
+                <div class = "fraction", name = "fraction">
+                    <button class = "add_button dividend", name = "upper_create_button", onclick="ShowSelectionMenu(this)">
+                        <img src = "Images/Add.png", class = "add_button_image">
+                    </button>
+                    <div class = "division_bar"></div>
+                    <button class = "add_button devider", name = "lower_create_button", onclick="ShowSelectionMenu(this)">
+                        <img src = "Images/Add.png", class = "add_button_image">
+                    </button>
+                </div>
+
+                <div class = "operator">
+                    <div class = "operator_inner">+</div>
+                </div>
+
+                <button class = "add_button create_operator_button",  id = "create_button_1", onclick="ShowSelectionOpetatorMenu(this)">
+                    <img src = "Images/Add.png", class = "add_button_image">
+                </button>
+
+                <div class = "parentheses", name = "parentheses">
+                    <div class = "parenthesis opening_parenthesis">
+                        <img src ="Images/Parenthesis.png", class = "parenthesis_item">
+                    </div>
+                    <button class = "add_button parenthesis_button", name ="parenthesis_button" onclick="ShowSelectionMenu(this)">
+                        <img src = "Images/Add.png", class = "add_button_image">
+                    </button>
+                    <div class = "parenthesis closing_parenthesis">
+                        <img src="Images/Parenthesis.png" class = "parenthesis_item", style = "transform: rotate(180deg)">
+                    </div>
+                </div>
+                
+            </div>
+
+            
+                
+            <button class = "result_button", onclick = "Calculate()">result</button>
+            <input class = "result_field">
+        </div>
+    </div>
+    <script src = "Block.js"></script>
+    <script src = "Fraction.js"></script>
+    <script src = "Parenthesis.js"></script>
+    <script src = "./script.js"></script>
+</body>
+

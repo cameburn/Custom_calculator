@@ -1,0 +1,177 @@
+body {
+    margin: 0px;
+    padding: 10px;
+    height: 300px;
+    background-color: cornflowerblue;
+}
+input {
+    width: 100%;
+    text-align: center;
+    height: 40%;
+    margin: 0px;
+    padding: 0px 2px;
+    border: 0px;
+    border-radius: 10px;
+}
+button{
+    cursor: pointer;
+}
+/*Classes*******************/
+/*universal Classes*/
+.main_container {
+    width: 100%;
+    height: 100%;
+}
+.container{
+    display: inline-block;
+}
+.calc_container{
+    position: relative;
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.prefabs_container {
+    display: none;
+}
+.start_position{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+/*Selection Menu*/
+.selection_menu{
+    position:absolute;
+    width: 90px;
+    display: none;
+    z-index: 10;
+}
+.selection_item{
+    width: 100%;
+    border-radius: 0px;
+    border-color: #1200a3;
+}
+/*Add_Button*/
+.add_button {
+    position: absolute;
+    display: inline-block;
+    padding: 0px;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+}
+.add_button_image{
+    width: 100%;
+    height: 100%;
+}
+
+/*Int*/
+.int {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 20px;
+    z-index: 2;
+}
+.int_inner {
+    height: 100%;
+}
+/*Fraction*/
+.fraction_container{
+    position: absolute;
+    width: 60px;
+    height: 50px;
+}
+.fraction {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 50px;
+}
+.dividend {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.division_bar{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: gray;
+}
+.devider{
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    transform: translate(-50%);
+}
+/*ParentHesis*/
+.parentheses {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+.parenthesis {
+    position: absolute;
+    width: 10px;
+    height: 40px;
+}
+.closing_parenthesis {
+    right: 0px;
+}
+.parenthesis_button {
+    top: 50%;
+    left: 10px;
+    transform: translate(0%, -50%);
+} 
+.parenthesis_item {
+    height: 100%;
+    width: 100%;
+}
+/*Operator*/
+.operator {
+    position: absolute;
+    display: inline-block;
+    margin: 0px;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 20px;
+    font-weight: 900;
+    z-index: 4;
+}
+.operator_inner {
+    position: absolute;
+    text-align:center;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    bottom: 0px;
+    margin: 0px;
+}
+/*Result*/
+.result_button{
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    left: 20px;
+    bottom: 20px;
+}
+.result_field{
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    left: 80px;
+    bottom: 20px;
+}
+.result_field:focus, .result_field:active {
+    outline: none;
+}
